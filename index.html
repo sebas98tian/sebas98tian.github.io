@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Notas</title>
+</head>
+<body>
+    <section class="general-content">
+        <h1>Mis Notas</h1>
+        <div class="content-crea">
+            <textarea name=""  rows="7" placeholder="Algo para recordar..." id="note"></textarea>
+            <input type="button" value="Crear" class="button-crea" id="crea">
+        </div>
+        <div class="db-notes">
+            <div class="notes-item a">
+                <p>"Hola. esta es mi primera nota guardada"</p>
+                <div class="space"></div>
+                <input type="button" value="Borrar" class="borrar" id="delete"><br>
+            </div>
+        </div>
+    </section>
+</body>
+<script src="index.js"></script>
+</html>
+<!-- let crear=document.getElementById("crea");
+let db_notes=document.querySelector(".db-notes");
+let delet=document.getElementById("delete");
+delet.addEventListener("click",()=>{
+    delet.parentNode.style.display="none"
+})
+crear.addEventListener("click",()=>{
+    let note=document.getElementById("note");
+    if(note.value==""){
+        alert("no puedes crear una nota sin contenido");
+    }else{
+        db_notes.innerHTML+=
+        `<div class="notes-item">
+            <p>${note.value}</p>
+            <div class="space"></div>
+            <input type="button" value="Borrar" class="borrar" id="borrar"><br>
+        </div>`
+        let borrar=document.querySelectorAll(".borrar");
+        for(let i=0; i<borrar.length;i++){
+            borrar[i].addEventListener("click",()=>{
+                borrar[i].parentNode.style.display="none";
+                borrar.splice(i,1);
+            })
+        }
+        note.value="";
+    }
+}) -->
+
